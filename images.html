@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/Arcan_icon.ico">
+    <title>Atasuke | Images</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="images.html">
+                        <span class="icon"><ion-icon name="images"></ion-icon></span>
+                        <span class="title">Images</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><ion-icon name="home"></ion-icon></span>
+                        <span class="title">Accueil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="presentation.html">
+                        <span class="icon"><ion-icon name="color-palette-outline"></ion-icon></span>
+                        <span class="title">Présentation</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://discord.gg/5pRZ45gyg4" target="_blank">
+                        <span class="icon"><ion-icon name="chevron-forward-outline"></ion-icon></ion-icon></span>
+                        <span class="title">Nous rejoindre</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <span class="title">Nous contacter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="actu.html">
+                        <span class="icon"><ion-icon name="share-social-outline"></ion-icon></span>
+                        <span class="title">Actualités</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- main -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="list"></ion-icon>
+                </div>
+                <!-- search -->
+                <div class="search">
+                    <label>
+                        <input class="searchstyle" type="text" placeholder="Rechercher ici">
+                        <ion-icon name="search"></ion-icon>
+                    </label>
+                </div>
+                <div class="logo">
+                    <img class="logo" src="img/logo.png" width="100">
+                </div>
+            </div>
+
+            <!-- Images -->
+            <div class="imgs">
+                <div class="comu">
+                    <h1 class="title">Plusieurs catégories</h1>
+                        <h1 class="title">communautaire</h1>
+                    <br>
+                    <img src="img/Comu.JPG" alt="">
+                </div>
+                <div class="jeux">
+                    <h1 class="title">Des salons de jeux</h1>
+                    <br>
+                    <img src="img/Jeux.JPG" alt="">
+                </div>
+                <div class="support">
+                    <h1 class="title">Des support pour vous</h1>
+                        <h1 class="title">en cas de besoin</h1>
+                    <br>
+                    <img src="img/Support.JPG" alt="">
+                </div>
+                <div class="voc">
+                    <h1 class="title">Et bien évidement des salons vocaux</h1>
+                    <br>
+                    <img src="img/Voc.JPG" alt="">
+                </div>
+            <center>
+            <h1 class="sepa">-----------------------</h1>
+        </center>
+        <div class="gnrl">
+            <h1 class="title">Un salon pour discuter</h1>
+            <br>
+            <img src="img/Gnrl.JPG" alt="">
+        </div>
+        <br><br>
+        <center>
+            <h1 class="title">Et bien plus encore...</h1>
+        </center>
+    </div>
+            
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        // Animation menu
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+
+        toggle.onclick = function(){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+        
+
+        let list = document.querySelectorAll('.navigation li');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('hovered'));
+            this.classList.add('hovered')
+        }
+        list.forEach((item)=>
+        item.addEventListener('mouseover', activeLink));
+    </script>
+</body>
+</html>

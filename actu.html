@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/Arcan_icon.ico">
+    <title>Atasuke</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="contact.html">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <span class="title">Nous contacter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><ion-icon name="home"></ion-icon></span>
+                        <span class="title">Accueil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="presentation.html">
+                        <span class="icon"><ion-icon name="color-palette-outline"></ion-icon></span>
+                        <span class="title">Présentation</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://discord.gg/5pRZ45gyg4" target="_blank">
+                        <span class="icon"><ion-icon name="chevron-forward-outline"></ion-icon></ion-icon></span>
+                        <span class="title">Nous rejoindre</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="images.html">
+                        <span class="icon"><ion-icon name="images"></ion-icon></span>
+                        <span class="title">Images</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="actu.html">
+                        <span class="icon"><ion-icon name="share-social-outline"></ion-icon></span>
+                        <span class="title">Actualités</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- main -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="list"></ion-icon>
+                </div>
+                <!-- search -->
+                <div class="search">
+                    <label>
+                        <input class="searchstyle" type="text" placeholder="Rechercher ici">
+                        <ion-icon name="search"></ion-icon>
+                    </label>
+                </div>
+                <div class="logo">
+                    <img class="logo" src="img/logo.png" width="100">
+                </div>
+            </div>
+
+
+
+
+
+            <!-- Actus  (nouvelle actu toujours en haut de la derniere) -->
+
+            <br><br>
+
+            <div class="actus">
+                
+                <div class="actu2">
+                    <h3 class="date">27 février 2022</h3>
+                    <h1 class="actu2">Un avis?</h1>
+                    <h2>Merci de laisser un avis sur le serveur pour nous aider à nous améliorer sur <a href="https://top.gg/servers/917088369333370890">ce site</a> !</h2>
+                </div>
+
+            </div>
+
+
+            <br><br>
+
+            <div class="actus">
+                <div class="actu1">
+                    <h3 class="date">25 février 2022</h3>
+                    <h1 class="actu1">Le début de tout...</h1>
+                    <h2>Atasuke à ouvert ses portes ! Merci à tous les staff et tous les membres d'avoir été là.</h2>
+                </div>
+            </div>
+
+
+
+
+
+
+            
+
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        // Animation menu
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+
+        toggle.onclick = function(){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+        
+
+        let list = document.querySelectorAll('.navigation li');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('hovered'));
+            this.classList.add('hovered')
+        }
+        list.forEach((item)=>
+        item.addEventListener('mouseover', activeLink));
+    </script>
+</body>
+</html>
