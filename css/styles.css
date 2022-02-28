@@ -283,6 +283,11 @@ div.actu2{
     border-radius: 30px;
     padding: 20px;
 }
+div.actu3{
+    background-color: var(--purple);
+    border-radius: 30px;
+    padding: 20px;
+}
 
 
 /* Widget */
